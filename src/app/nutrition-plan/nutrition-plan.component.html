@@ -1,0 +1,113 @@
+<head>
+    <!-- Other head content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<!-- User -->
+
+<!-- <li class="nav-item navbar-dropdown dropdown-user dropdown">
+    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+        <div class="avatar avatar-online">
+            <img src="./assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+        </div>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+            <a class="dropdown-item" href="#">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="avatar avatar-online">
+                            <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <span class="fw-semibold d-block">John Doe</span>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <div class="dropdown-divider"></div>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">
+                <i class="bx bx-user me-2"></i>
+                <span class="align-middle">My Profile</span>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">
+                <i class="bx bx-cog me-2"></i>
+                <span class="align-middle">Settings</span>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">
+                <span class="d-flex align-items-center align-middle">
+                    <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                    <span class="flex-grow-1 align-middle">Billing</span>
+                    <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <div class="dropdown-divider"></div>
+        </li>
+        <li>
+            <a class="dropdown-item" href="auth-login-basic.html">
+                <i class="bx bx-power-off me-2"></i>
+                <span class="align-middle">Log Out</span>
+            </a>
+        </li>
+    </ul>
+</li> -->
+<!--/ User -->
+
+<div class="container mt-5" *ngIf="nutritionData">
+    <div class="card">
+        <div class="card-header">
+            <h2>Your Nutrition Plan</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-fire-alt fa-2x"></i>
+                            <h5 class="card-title"><strong>Calories</strong></h5>
+                            <p class="card-text">{{ nutritionData.goalCalories }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-drumstick-bite fa-2x"></i>
+                            <h5 class="card-title"><strong>Protein</strong></h5>
+                            <p class="card-text">{{ nutritionData.goalProtein }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-bread-slice fa-2x"></i>
+                            <h5 class="card-title"><strong>Carbs</strong></h5>
+                            <p class="card-text">{{ nutritionData.goalCarbs }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-cheese fa-2x"></i>
+                            <h5 class="card-title"><strong>Fat</strong></h5>
+                            <p class="card-text">{{ nutritionData.goalFat }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

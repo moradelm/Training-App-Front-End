@@ -1,0 +1,92 @@
+/* Style the user dropdown menu */
+.dropdown-user {
+    position: relative;
+}
+
+.dropdown-user .nav-link {
+    padding: 0;
+}
+
+.dropdown-user .nav-link .avatar {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.dropdown-user .nav-link .avatar img {
+    width: 100%;
+    height: auto;
+}
+
+.dropdown-user .dropdown-menu {
+    min-width: 250px;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-user .dropdown-item {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.dropdown-user .dropdown-item:hover,
+.dropdown-user .dropdown-item:focus {
+    background-color: #f8f9fa;
+}
+
+.dropdown-user .dropdown-divider {
+    margin: 0;
+}
+
+.dropdown-user .dropdown-item i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: red;
+}
+
+.dropdown-user .badge {
+    background-color: red;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    margin-left: auto;
+    color: white;
+}
+
+.dropdown-user .fw-semibold {
+    font-weight: 600;
+}
+
+.dropdown-user .text-muted {
+    color: #888;
+    font-size: 12px;
+}
+
+/* Customize dropdown item colors */
+.dropdown-user .dropdown-item {
+    color: black;
+    /* Change text color to black */
+}
+
+.dropdown-user .dropdown-item:hover,
+.dropdown-user .dropdown-item:focus {
+    background-color: red;
+    /* Change background color to red */
+    color: white;
+    /* Change text color to white */
+}
+
+.dropdown-user .dropdown-item i {
+    color: black;
+    /* Change icon color to black */
+}
+
+.dropdown-user .badge {
+    background-color: black;
+    /* Change badge background color to black */
+}
