@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user.service';
 
@@ -11,7 +12,7 @@ export class NutritionPlanComponent implements OnInit {
   userId: number | null = null;
   nutritionData: any; 
 
-  constructor(private userService: UserService, private route: ActivatedRoute) {}
+  constructor(private userService: UserService, private route: ActivatedRoute,private router: Router) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -41,4 +42,11 @@ export class NutritionPlanComponent implements OnInit {
       );
     }
   }
+  logout(): void {
+    // Perform any necessary logout actions, like clearing user data, etc.
+    // Then navigate to the login page.
+    this.nutritionData = null;
+    this.router.navigate(['/login']);
+  }
+  
 }
