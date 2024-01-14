@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
   registrationForm!: FormGroup;
-  currentStep: number = 1; // Initialize the current step
-  totalSteps: number = 5; // Set the total number of steps
+  currentStep: number = 1; 
+  totalSteps: number = 5; 
 
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router) {}
 
@@ -62,7 +62,7 @@ export class RegistrationComponent implements OnInit {
       }
     );
   }
-
+  
   cancel(): void {
     this.router.navigate(['/home']);
   }
