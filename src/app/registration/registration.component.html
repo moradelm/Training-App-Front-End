@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<!-- <div class="container mt-5">
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card">
@@ -62,6 +62,99 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Register</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- registration.component.html -->
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    User Registration
+                </div>
+                <div class="card-body">
+                    <div *ngIf="currentStep === 1">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" formControlName="lastName">
+                        </div>
+                    </div>
+
+                    <div *ngIf="currentStep === 2">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" formControlName="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" formControlName="password">
+                        </div>
+                    </div>
+
+                    <div *ngIf="currentStep === 3">
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select class="form-control" id="gender" formControlName="gender">
+                                <option value="MALE">Male</option>
+                                <option value="FEMALE">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth</label>
+                            <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+                        </div>
+                    </div>
+
+                    <div *ngIf="currentStep === 4">
+                        <div class="form-group">
+                            <label for="activityLevel">Activity Level</label>
+                            <select class="form-control" id="activityLevel" formControlName="activityLevel">
+                                <option value="SEDENTARY">Sedentary</option>
+                                <option value="LIGHTLY_ACTIVE">Lightly Active</option>
+                                <option value="MODERATELY_ACTIVE">Moderately Active</option>
+                                <option value="VERY_ACTIVE">Very Active</option>
+                                <option value="SUPER_ACTIVE">Super Active</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="height">Height (cm)</label>
+                            <input type="number" class="form-control" id="height" formControlName="height">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" class="form-control" id="weight" formControlName="weight">
+                        </div>
+                    </div>
+
+                    <div *ngIf="currentStep === 5">
+                        <div class="form-group">
+                            <label for="goal">Goal</label>
+                            <select class="form-control" id="goal" formControlName="goal">
+                                <option value="WEIGHT_LOSS">Weight Loss</option>
+                                <option value="WEIGHT_GAIN">Weight Gain</option>
+                                <option value="WEIGHT_MAINTENANCE">Weight Maintenance</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-secondary" (click)="prevStep()" *ngIf="currentStep > 1">Previous</button>
+                        <button type="button" class="btn btn-primary" (click)="nextStep()" *ngIf="currentStep < totalSteps">Next</button>
+                    </div>
+
+                    <div *ngIf="currentStep === totalSteps">
+                        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Register</button>
+                        <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>

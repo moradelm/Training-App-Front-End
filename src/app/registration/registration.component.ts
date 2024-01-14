@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
   registrationForm!: FormGroup;
+  currentStep: number = 1; // Initialize the current step
+  totalSteps: number = 5; // Set the total number of steps
 
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router) {}
 
@@ -28,6 +30,18 @@ export class RegistrationComponent implements OnInit {
     });
   }
 
+  nextStep(): void {
+    if (this.currentStep < this.totalSteps) {
+      this.currentStep++;
+    }
+  }
+
+  prevStep(): void {
+    if (this.currentStep > 1) {
+      this.currentStep--;
+    }
+  }
+
   onSubmit(): void {
     if (this.registrationForm.invalid) {
       return;
@@ -39,10 +53,8 @@ export class RegistrationComponent implements OnInit {
       (response) => {
         console.log('User registered successfully. ID:', response.id);
 
-        // Assuming the response contains the newly generated user ID
         const userId = response.id;
 
-        // Navigate to the nutrition plan page with the user ID as a parameter
         this.router.navigate(['/nutrition-plan', userId]);
       },
       (error) => {
@@ -50,4 +62,9 @@ export class RegistrationComponent implements OnInit {
       }
     );
   }
+
+  cancel(): void {
+    this.router.navigate(['/home']);
+  }
 }
+

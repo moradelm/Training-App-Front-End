@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url(../../assets/feature-3.jpg) center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    border-bottom: none;
+    background-color: red;
+    color: black;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: red;
+    border-color: red;
+    color: black;
+    margin-right: 10px;
+}
+.btn-secondary{
+    background-color: white;
+    color: black;
+}

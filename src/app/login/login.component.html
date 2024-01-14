@@ -1,27 +1,33 @@
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6 mx-auto">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    User Login
-                </div>
-                <div class="card-body">
-                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="username" class="form-control" id="username" formControlName="username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" formControlName="password"
-                                required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                        <button type="button" class="btn btn-secondary" (click)="navigateToRegistration()">Sign
-                            Up</button>
-                    </form>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="assets/img/favicon.ico" rel="icon">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="card">
+            <div class="card-header">
+                User
+            </div>
+            <div class="card-body">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="username" class="form-control" id="username" formControlName="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" formControlName="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-secondary" (click)="navigateToRegistration()">Sign Up</button>
+                </form>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+</html>

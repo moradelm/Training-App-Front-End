@@ -24,24 +24,7 @@ export class LoginComponent {
     });
   }
 
-//   onSubmit(): void {
-//     if (this.loginForm.valid) {
-//       const formData = this.loginForm.value;
-
-//        this.userService.login(formData.username, formData.password)
-//       .subscribe({
-//         next: (loginResponse: any) => {
-//           console.log("all good");
-//           this.router.navigate(['/nutrition-plan']);
-//         },
-//         error: (error: any) => {
-//           console.log("Error");
-//         }
-//       });
-//   }
-// }
-
-onSubmit(): void {
+  onSubmit(): void {
   if (this.loginForm.valid) {
     const formData = this.loginForm.value;
 
@@ -77,8 +60,6 @@ onSubmit(): void {
   navigateToRegistration(): void {
     this.router.navigate(['/registration']);
   }
-
-  // Custom validator function for username format
   private usernameValidator(control: FormControl): { [key: string]: any } | null {
     const validUsernamePattern = /^[a-zA-Z0-9_-]*$/; 
     const isValid = validUsernamePattern.test(control.value);
